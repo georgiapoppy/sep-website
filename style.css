@@ -46,7 +46,7 @@ main {
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 5px;
     background-color: var(--accent);
     color: var(--bg-light);
 }
@@ -91,7 +91,7 @@ button:hover {
 }
 
 .checkbox-list {
-    line-height: 2;
+    line-height: 2.3;
     align-items: center;
 }
 
@@ -106,6 +106,7 @@ button:hover {
 
 .checkbox-box:hover {
     background: #9fbee6;
+    cursor: pointer;
 }
 
 .checkbox-box input[type="checkbox"] {
@@ -113,23 +114,93 @@ button:hover {
     transform: scale(1.2);
 }
 
+#searchBar::placeholder {
+    color: #ffffff; 
+    opacity: 1; 
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1px;
     color: #223042;
+    font-size: 0.9em;
 }
 
 table, th, td {
-    border: 1px solid #5f7899;
+    border: 1px solid #364c69;
+    background-color: #809fc7;
+    color: #ffffff;
 }
 
 th, td {
     padding: 0.5px;
     text-align: left;
+    border-bottom: 1px solid #364c69;
+    padding: 5px;
+}
+
+td:first-child {
+    font-weight: bold;
+    background-color: #537096;
+    width: 20%;
 }
 
 th {
     background: #809fc7;
     text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#searchBar {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #809fc7;
+    background-color: #809fc7;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#sort1, #sort2 {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #809fc7;
+    background-color: #809fc7;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#searchBar:focus, #sortSelect:focus {
+    outline: none;
+}
+
+.runs-list {
+    padding: 0;
+    margin: 0;
+}
+
+.run-item {
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #364c69;
+}
+
+.run-summary {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.run-details {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9em;
 }
