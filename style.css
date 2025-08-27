@@ -101,6 +101,7 @@ button:hover {
     border-radius: 10px;
     padding: 5px;
     transition: background 0.2s;
+    white-space: nowrap;
 }
 
 .checkbox-box:hover {
