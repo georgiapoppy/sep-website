@@ -12,30 +12,116 @@
 </head>
 <body>
     <header>
-        <div class="star" >
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <div id="heading">
-            <h1>UG-BOT-2</h1>
-        </div>
-        <div class="star" >
-            <i class="fa-solid fa-star"></i>
-        </div>
+        <h1>UG-BOT-2</h1>
     </header>
+
     <nav>
-        <a href="index.html">OUTPUTS</a>
-        <a href="runs.html">RUNS</a>
+        <a href="#config" onclick="showPage('config')">Configuration</a>
+        <a href="#runs" onclick="showPage('runs')">Runs Output</a>
     </nav>
 
-    <main>
-        <h2>OUTPUTS</h2>
-        <p>hi</p>
-    </main>
+    <div class="container">
+        <!-- CONFIGURATION PAGE -->
+        <div id="config" class="panel">
+        <h2>Configuration Panel</h2>
+        <div class="panel">
+            <div class="configs">
+                <label for="target">Target</label>
+                <input type="text" id="target">
+            </div>
+            <div class="configs">
+                <label for="mode">Python File</label>
+                <select id="mode">
+                    <option>main.py</option>
+                    <option>test.py</option>
+                </select>
+            </div>
+            <div class="configs">
+                <label for="timeout">Timeout</label>
+                <input type="number" id="timeout" value="60">
+            </div>
+            <div class="configs">
+                <label for="notes">Notes</label>
+                <input type="text" id="target">
+            </div>
+        </div>
+        <br>
+            <button onclick="saveConfig()">Save</button>
+        </div>
 
+        <!-- RUNS PAGE -->
+        <div id="runs" class="panel" style="display:none;">
+        <h2>Output of Runs</h2>
+        <div class="checkbox-list">
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Job Run ID" checked> Job Run ID</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Request ID" checked> Request ID</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Process Name" checked> Process Name</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Machine" checked> Machine</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Status" checked> Status</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Queued" checked> Queued</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Started" checked> Started</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Notes" checked> Notes</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Completed" checked> Completed</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Duration" checked> Duration</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Console Output" checked> Console Output</label>
+            <label class="checkbox-box"><input type="checkbox" class="col-toggle" value="Score" checked> Score</label>
+        </div>
+        <br>
+        <table id="runsTable">
+            <thead>
+            <tr>
+                <th>Job Run ID</th>
+                <th>Request ID</th>
+                <th>Process Name</th>
+                <th>Machine</th>
+                <th>Status</th>
+                <th>Queued</th>
+                <th>Started</th>
+                <th>Notes</th>
+                <th>Completed</th>
+                <th>Duration</th>
+                <th>Console Output</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>001</td>
+                <td>REQ-98</td>
+                <td>Exploit SQL</td>
+                <td>192.168.1.10</td>
+                <td>Completed</td>
+                <td>2025-08-27 12:00</td>
+                <td>2025-08-27 12:02</td>
+                <td>Initial SQLi test</td>
+                <td>2025-08-27 12:05</td>
+                <td>3m</td>
+                <td>Success, data exfiltrated</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>REQ-99</td>
+                <td>Port Scan</td>
+                <td>192.168.1.20</td>
+                <td>Failed</td>
+                <td>2025-08-27 12:10</td>
+                <td>2025-08-27 12:12</td>
+                <td>Connection reset</td>
+                <td>2025-08-27 12:14</td>
+                <td>4m</td>
+                <td>Error: timeout</td>
+                <td>20</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    <br>
+    <script src="script.js"></script>
     <footer>
         <p>SEP WEBSITE for UG-BOT-2</p>
+        <p id="tiny">Alex Kernot, Bailey Nathan, Cameron Gilbert, Georgia Mason, Jasmin Lu, Luke Stassinopoulos, Maria Madakuzhy, Phoenix Pereira, Vasilis Michalakis</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

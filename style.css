@@ -17,9 +17,6 @@ body {
     color: var(--secondary);
     transition: all 0.3s ease-in-out;
     text-align: justify;
-    opacity: 0; 
-    animation: fadeIn 2s ease-in;
-    animation-fill-mode: forwards;
 }
 
 nav {
@@ -43,7 +40,6 @@ nav a:hover, main a:hover {
 }
 
 main {
-    padding-bottom: 3rem;
     text-justify: inter-word;
     text-align: center;
 }
@@ -55,58 +51,84 @@ footer {
     color: var(--bg-light);
 }
 
-i {
-    font-size: 2rem;
-    padding: 0;
-}
-
 header {
-    font-family: 'Garamond';
-    background-color: var(--bg-light);
     color: var(--accent);
     width: 100%;
-    height: 60px;
-    display: flex;
+    padding: 10px;
+    text-align: center;
     justify-content: space-between;
 }
 
 header h1 {
-    padding: 0;
-    margin: 0;
-}
-
-.heading2 {
-    font-weight: bold;
-    padding-top: 0;
-    margin-top: 0;
-}
-
-.star, #heading {
-    padding: 10px;
-}
-
-.star {
-    width: 100px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out;
-}
-
-header a {
-    font-size: 1.5rem;
-    padding: 0;
     margin: 0;
     font-family: 'Roboto';
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 500px) {
-    #heading {
-        font-size: 80%;
-        vertical-align: middle;
-        padding-top: 10px;
-    }
+button {
+    background: #5f7899;
+    color: white;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #809fc7;
+}
+
+#tiny {
+    font-size: 70%;
+}
+
+.container {
+    margin: 10px;
+    text-align: center;
+}
+
+.configs {
+    padding-top: 10px;
+}
+
+.checkbox-list {
+    line-height: 2;
+    align-items: center;
+}
+
+.checkbox-box {
+    background: #809fc7;
+    color: #364c69;
+    border-radius: 10px;
+    padding: 5px;
+    transition: background 0.2s;
+}
+
+.checkbox-box:hover {
+    background: #9fbee6;
+}
+
+.checkbox-box input[type="checkbox"] {
+    accent-color: #364c69;
+    transform: scale(1.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1px;
+    color: #223042;
+}
+
+table, th, td {
+    border: 1px solid #5f7899;
+}
+
+th, td {
+    padding: 0.5px;
+    text-align: left;
+}
+
+th {
+    background: #809fc7;
+    text-align: center;
 }
